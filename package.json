@@ -1,0 +1,24 @@
+{
+  "name": "6.4---ketty",
+  "version": "1.0.0",
+  "description": "portfolio website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tailwind": "tailwindcss -i ./src/input.css -o ./build/output.css --watch",
+    "prettier": "prettier -write **/*.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iafthab/6.4-Ketty.git"
+  },
+  "keywords": [
+    "portfolio"
+  ],
+  "author": "iafthab",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iafthab/6.4-Ketty/issues"
+  },
+  "homepage": "https://github.com/iafthab/6.4-Ketty#readme"
+}
