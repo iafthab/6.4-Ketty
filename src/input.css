@@ -1,3 +1,87 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Spectral+SC&display=swap");
+
+@font-face {
+  font-family: "Games";
+  src: url("./../build/fonts/games.regular.ttf");
+}
+@font-face {
+  font-family: "UniSans";
+  src: url("./../build/fonts/UniSansHeavy.otf");
+}
+@font-face {
+  font-family: "Grandezza";
+  src: url("./../build/fonts/SF-Grandezza-Medium.ttf") format("truetype");
+}
+
+.grad {
+  background-image: repeating-conic-gradient(
+    #54717b 0%,
+    #88918c 20%,
+    #4e6465 25%,
+    #6c7e7f 40%,
+    #657576 43%,
+    #708282 46%,
+    #54717b 50%
+  );
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.gridShadow div {
+  box-shadow: inset -5px -5px 1px #7a2408;
+  border-bottom: 1.5px solid #ff6e20;
+  border-right: 1.5px solid #ff6e20;
+  border-top: 0.5px solid #ff6e20;
+  border-left: 0.5px solid #ff6e20;
+}
+
+#list_container li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+@keyframes sparkOut {
+  25%,
+  50%,
+  100% {
+    box-shadow: 0px 4px 1px 0px #dd955160;
+  }
+  0%,
+  40%,
+  75% {
+    box-shadow: 0px 4px 1px 0px #dd955100;
+  }
+}
+.animate-sparkOut {
+  animation: sparkOut 1s step-end forwards;
+}
+
+@keyframes spark {
+  25%,
+  50%,
+  100% {
+    color: #dd9551;
+    box-shadow: inset -2px -2px 10px 2px #dd9551;
+  }
+  0%,
+  40%,
+  75% {
+    color: #71717a;
+    box-shadow: none;
+  }
+}
+.animate-spark {
+  animation: spark 1s step-end forwards;
+}
