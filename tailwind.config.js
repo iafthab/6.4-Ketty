@@ -36,7 +36,7 @@ module.exports = {
         spectral: ["Spectral SC", "monospace"],
         games: ["Games", "sans-serif"],
         uniSans: ["UniSans", "sans-serif"],
-        grandezza: ["Grandezza", "monospace"],
+        grandezza: ["Grandezza", "serif"],
       },
     },
   },

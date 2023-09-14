@@ -4,62 +4,54 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="./style.css" rel="stylesheet" />
+    <!-- <link href="./img/favicon.ico" rel="favicon" type="image/x-icon" /> -->
+    <link rel="icon" type="image/x-icon" href="./img/favicon.ico" />
     <title>Afthab</title>
     <script src="./main.js" type="module" defer></script>
   </head>
   <body
-    class="w-full -skew-y-3 translate-y-6 bg-gradient-to-r from-orange-700 via-orange-500 via-80% to-orange-300 text-white2"
+    class="w-full translate-y-6 bg-gradient-to-r from-orange-700 from-0% via-orange-500 via-80% to-orange-300 text-white2"
   >
     <div
-      class="w-[95%] m-auto shadow-[50px_50px_50px_#454545] border-4 border-red-700 border-l-8 px-10 pt-20 lg:px-40 rounded-[70px] bg-gradient-to-r from-orange-700 to-red-600"
+      class="w-[95%] -skew-y-[4deg] -translate-y-4 translate-x-4 m-auto shadow-[40px_60px_100px_#454545] border-4 border-red-700 border-l-8 px-10 pt-20 lg:px-40 rounded-[70px] bg-gradient-to-r from-orange-700 to-red-600"
     >
       <audio id="player" autoplay>
         <source src="./audio/radio_tuning.mp3" type="audio/mpeg" />
       </audio>
 
       <header
-        class="flex justify-between font-grandezza font-extralight fixed gap-8 min-w-full left-0 px-8 lg:px-40"
+        class="flex justify-between items-center font-grandezza font-extralight fixed gap-8 min-w-full left-0 px-8 lg:px-40"
       >
-        <div class="flex justify-between w-full">
-          <span class="flex text-2xl flex-col">
-            <p>ON/OFF</p>
-            <button id="power" type="button" title="home">
-              <div
-                class="-skew-y-3 shadow-[5px_5px_10px_2px_#882906,-5px_-5px_8px_2px_#cf2c13] m-auto h-20 border-t-4 border-l-[6px] w-20 border-[1px] border-gray-600 rounded-full grad"
-              ></div>
-            </button>
-          </span>
-          <span class="flex text-2xl flex-col">
-            <p>TUNE</p>
-            <button id="tune" type="button" title="tune">
-              <div
-                class="-skew-y-3 m-auto shadow-[5px_5px_10px_2px_#800600,-5px_-5px_8px_2px_#c11a00] h-20 border-t-4 border-l-[6px] w-20 border-[1px] border-gray-600 rounded-full grad"
-              ></div>
-            </button>
-          </span>
-        </div>
-        <nav class="flex text-[1rem] gap-3 lg:gap-5">
+        <span class="flex text-2xl flex-col">
+          <p>TUNE</p>
+          <button id="tune" type="button" title="tune">
+            <div
+              class="shadow-[5px_5px_10px_2px_#882906,-5px_-5px_8px_2px_#cf2c13] border-t-[5px] border-l-[7px] -skew-y-[4deg] m-auto h-20 w-20 border-[1px] border-slate-600 rounded-full grad"
+            ></div>
+          </button>
+        </span>
+        <nav class="flex text-[1rem] gap-10">
           <span class="flex flex-col">
-            <p>PLAY</p>
-            <button id="play" type="button" title="play">
+            <p>VOL&nbsp;<span class="text-[1.5rem]">+</span></p>
+            <button id="volUp" type="button" title="volume +">
               <div
-                class="-skew-y-3 m-auto shadow-[3px_3px_10px_2px_#800600,-5px_-5px_8px_2px_#c11a00] h-10 border-t-2 border-l-4 w-10 border-[1px] border-gray-600 rounded-full grad"
+                class="off-shadow-small border-t-2 border-l-4 -skew-y-[4deg] m-auto h-12 w-12 border-[1px] border-slate-600 rounded-full grad"
               ></div>
             </button>
           </span>
           <span class="flex flex-col">
-            <p>PAUSE</p>
-            <button id="pause" type="button" title="pause">
+            <p>VOL&nbsp;<span class="text-[1.5rem]">-</span></p>
+            <button id="volDown" type="button" title="volume -">
               <div
-                class="-skew-y-3 m-auto shadow-[3px_3px_10px_2px_#800600,-5px_-5px_8px_2px_#c11a00] h-10 border-t-2 border-l-4 w-10 border-[1px] border-gray-600 rounded-full grad"
+                class="off-shadow-small border-t-2 border-l-4 -skew-y-[4deg] m-auto h-12 w-12 border-[1px] border-slate-600 rounded-full grad"
               ></div>
             </button>
           </span>
-          <span class="flex flex-col">
+          <span class="flex flex-col justify-end">
             <p>MUTE</p>
             <button id="mute" type="button" title="mute">
               <div
-                class="-skew-y-3 m-auto shadow-[3px_3px_10px_2px_#800600,-5px_-5px_8px_2px_#c11a00] h-10 border-t-2 border-l-4 w-10 border-[1px] border-gray-600 rounded-full grad"
+                class="off-shadow-small border-t-2 border-l-4 -skew-y-[4deg] m-auto h-12 w-12 border-[1px] border-slate-600 rounded-full grad"
               ></div>
             </button>
           </span>
@@ -70,7 +62,7 @@
           <div class="flex flex-col justify-evenly">
             <div>
               <h1
-                class="font-games text-6xl px-10 py-3 m-auto tracking-tight border-white2 border-2 rounded-full"
+                class="font-games text-center text-6xl px-10 py-3 m-auto tracking-tight border-white2 border-2 rounded-full"
               >
                 AFTHAB
               </h1>
@@ -95,7 +87,7 @@
         </section>
         <section class="my-20">
           <h3 class="font-uniSans tracking-widest my-4 text-3xl text-center">
-            Proficiencies
+            PROFICIENCIES
           </h3>
           <div class="columns-2 gap-x-20 text-xl py-4">
             <div class="my-32 text-right">
@@ -122,7 +114,7 @@
         </section>
         <section class="relative z-10 w-full my-20">
           <h3 class="font-uniSans tracking-widest my-2 text-3xl text-center">
-            Technologies
+            TECHNOLOGIES
           </h3>
           <div
             id="listCircle"
@@ -324,7 +316,7 @@
         </section>
         <section class="my-20">
           <h3 class="font-uniSans tracking-widest my-1 text-3xl text-center">
-            Projects
+            PROJECTS
           </h3>
 
           <div
@@ -409,7 +401,7 @@
       </main>
       <footer class="flex justify-around mb-20 mt-40 text-orange-300">
         <form
-          class="flex justify-evenly flex-col drop-shadow-[1.5px_1.5px_1px_#ff5900]"
+          class="flex justify-between font-semibold flex-col drop-shadow-[2px_2px_1.5px_#ff6a00]"
         >
           <div>
             <p class="text-3xl">
