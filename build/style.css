@@ -1102,6 +1102,12 @@ video {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+.shadow-\[3px_3px_10px_2px_\#800600\2c -3px_-3px_8px_2px_\#c11a00\] {
+  --tw-shadow: 3px 3px 10px 2px #800600,-3px -3px 8px 2px #c11a00;
+  --tw-shadow-colored: 3px 3px 10px 2px var(--tw-shadow-color), -3px -3px 8px 2px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
 .shadow-\[40px_60px_100px_\#454545\2c -10px_-8px_10px_0px_\#ea580c80\] {
   --tw-shadow: 40px 60px 100px #454545,-10px -8px 10px 0px #ea580c80;
   --tw-shadow-colored: 40px 60px 100px var(--tw-shadow-color), -10px -8px 10px 0px var(--tw-shadow-color);
@@ -1146,6 +1152,8 @@ video {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
+/* Importing local fonts */
+
 @font-face {
   font-family: "Games";
 
@@ -1170,7 +1178,7 @@ video {
   src: url("./fonts/SF-Grandezza-Medium.ttf") format("truetype");
 }
 
-/* Hiding Scrollbar  */
+/* Hiding Scrollbar */
 
 body::-webkit-scrollbar {
   display: none;
@@ -1180,6 +1188,8 @@ body {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+/* Gradient on buttons */
 
 .grad {
   background-image: repeating-conic-gradient(
@@ -1193,7 +1203,7 @@ body {
   );
 }
 
-.gridShadow div {
+.circleDesign div {
   box-shadow: inset -5px -5px 1px #7a2408;
   border-bottom: 1.5px solid #ff6e20;
   border-right: 1.5px solid #ff6e20;
@@ -1201,12 +1211,16 @@ body {
   border-left: 0.5px solid #ff6e20;
 }
 
+/* Technologies Container */
+
 #list_container li {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 0.25rem;
 }
+
+/* Animations */
 
 @keyframes sparkOut {
   25%,
@@ -1242,30 +1256,8 @@ body {
   }
 }
 
-.font-spectral {
-  font-family: "Spectral SC", serif;
-}
-
 .animate-spark {
   animation: spark 1s step-end forwards;
-}
-
-.off-shadow-small {
-  box-shadow: 3px 3px 10px 2px #800600, -3px -3px 8px 2px #c11a00;
-}
-
-.on-shadow-small {
-  box-shadow: 2px 2px 10px 2px #800600, -2px -2px 8px 2px #c11a00;
-}
-
-.off-border-small {
-  border-top-width: 2px;
-  border-left-width: 4px;
-}
-
-.on-border-small {
-  border-top-width: 1.5px;
-  border-left-width: 3px;
 }
 
 @media (min-width: 1024px) {
