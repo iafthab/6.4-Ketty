@@ -2,18 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Spectral+SC&display=swap");
 @font-face {
   font-family: "Games";
-  src: url("./../build/fonts/games.regular.ttf");
+  src: url("./fonts/games.regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Spectral SC";
+  src: url("./fonts/SpectralSC-Bold.ttf") format("truetype");
 }
 @font-face {
   font-family: "UniSans";
-  src: url("./../build/fonts/UniSansHeavy.otf");
+  src: url("./fonts/UniSansHeavy.otf") format("opentype");
 }
 @font-face {
   font-family: "Grandezza";
-  src: url("./../build/fonts/SF-Grandezza-Medium.ttf") format("truetype");
+  src: url("./fonts/SF-Grandezza-Medium.ttf") format("truetype");
 }
 
 /* Hiding Scrollbar  */
@@ -81,6 +84,10 @@ body {
     color: #71717a;
     box-shadow: none;
   }
+}
+
+.font-spectral {
+  font-family: "Spectral SC", serif;
 }
 
 .animate-spark {

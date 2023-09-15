@@ -785,10 +785,6 @@ video {
   border-width: 2px;
 }
 
-.border-4 {
-  border-width: 4px;
-}
-
 .border-8 {
   border-width: 8px;
 }
@@ -807,10 +803,6 @@ video {
 
 .border-l-4 {
   border-left-width: 4px;
-}
-
-.border-l-8 {
-  border-left-width: 8px;
 }
 
 .border-l-\[7px\] {
@@ -853,9 +845,9 @@ video {
   border-color: rgb(255 237 213 / var(--tw-border-opacity));
 }
 
-.border-red-700 {
+.border-orange-600 {
   --tw-border-opacity: 1;
-  border-color: rgb(185 28 28 / var(--tw-border-opacity));
+  border-color: rgb(234 88 12 / var(--tw-border-opacity));
 }
 
 .border-slate-600 {
@@ -1005,7 +997,7 @@ video {
 }
 
 .font-spectral {
-  font-family: Spectral SC, monospace;
+  font-family: Spectral SC, serif;
 }
 
 .font-uniSans {
@@ -1110,9 +1102,9 @@ video {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-.shadow-\[40px_60px_100px_\#454545\] {
-  --tw-shadow: 40px 60px 100px #454545;
-  --tw-shadow-colored: 40px 60px 100px var(--tw-shadow-color);
+.shadow-\[40px_60px_100px_\#454545\2c -10px_-8px_10px_0px_\#ea580c80\] {
+  --tw-shadow: 40px 60px 100px #454545,-10px -8px 10px 0px #ea580c80;
+  --tw-shadow-colored: 40px 60px 100px var(--tw-shadow-color), -10px -8px 10px 0px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
@@ -1157,19 +1149,25 @@ video {
 @font-face {
   font-family: "Games";
 
-  src: url("./../build/fonts/games.regular.ttf");
+  src: url("./fonts/games.regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Spectral SC";
+
+  src: url("./fonts/SpectralSC-Bold.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "UniSans";
 
-  src: url("./../build/fonts/UniSansHeavy.otf");
+  src: url("./fonts/UniSansHeavy.otf") format("opentype");
 }
 
 @font-face {
   font-family: "Grandezza";
 
-  src: url("./../build/fonts/SF-Grandezza-Medium.ttf") format("truetype");
+  src: url("./fonts/SF-Grandezza-Medium.ttf") format("truetype");
 }
 
 /* Hiding Scrollbar  */
@@ -1242,6 +1240,10 @@ body {
     color: #71717a;
     box-shadow: none;
   }
+}
+
+.font-spectral {
+  font-family: "Spectral SC", serif;
 }
 
 .animate-spark {

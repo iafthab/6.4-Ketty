@@ -33,6 +33,8 @@ function playAudio() {
   let audioSource = songs[Math.floor(Math.random() * 3)];
   player.src = audioSource;
 }
+player.volume = 0.5;
+
 player.addEventListener("ended", () => {
   playAudio();
 });
